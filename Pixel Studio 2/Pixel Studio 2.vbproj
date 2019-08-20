@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD8E7C87-194C-40AC-B4A0-30C66FDBC4EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Pixel_Studio_2.My.MyApplication</StartupObject>
+    <RootNamespace>Pixel_Studio_2</RootNamespace>
+    <AssemblyName>Pixel Studio 2</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Pixel Studio 2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Pixel Studio 2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PixelStudio.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DialogBoxes\frmRawOptions.designer.vb">
+      <DependentUpon>frmRawOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBoxes\frmRawOptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxes\frmSize.designer.vb">
+      <DependentUpon>frmSize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBoxes\frmSize.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxes\frmRender.designer.vb">
+      <DependentUpon>frmRender.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBoxes\frmRender.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DirectPixel.vb" />
+    <Compile Include="GaussianBlur.vb" />
+    <Compile Include="Tools\BasicTool.designer.vb">
+      <DependentUpon>BasicTool.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\BasicTool.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\BitmapLoader.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Brightness.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Contrast.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrButton.designer.vb">
+      <DependentUpon>ctrButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctrButton.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrControlList.designer.vb">
+      <DependentUpon>ctrControlList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctrControlList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrToolButton.designer.vb">
+      <DependentUpon>ctrToolButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctrToolButton.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Edit.vb" />
+    <Compile Include="Tools\BoxBlur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Blur.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\RAWExport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\RAWLoader.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Normalize.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Opacity.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Gamma.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Export.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBoxes\frmValue.designer.vb">
+      <DependentUpon>frmValue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBoxes\frmValue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\getAlpha.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\getBlack.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\getBlue.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\getCyan.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\getGreen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\getMagenta.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\getRed.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\getYellow.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Grayscale.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\Invert.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="pnlDoubleBufferd.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RawIO.vb" />
+    <Compile Include="Render.vb" />
+    <Compile Include="Tools\Resize.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\ScaleColor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\SolidBitmap.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\TDlizer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolsLink.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DialogBoxes\frmRawOptions.resx">
+      <DependentUpon>frmRawOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxes\frmSize.resx">
+      <DependentUpon>frmSize.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxes\frmRender.resx">
+      <DependentUpon>frmRender.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\BasicTool.resx">
+      <DependentUpon>BasicTool.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrButton.resx">
+      <DependentUpon>ctrButton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrControlList.resx">
+      <DependentUpon>ctrControlList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrToolButton.resx">
+      <DependentUpon>ctrToolButton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBoxes\frmValue.resx">
+      <DependentUpon>frmValue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\RAWLoader.resx">
+      <DependentUpon>RAWLoader.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cmdC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cmdL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cmdR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oGramm48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScrollBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScrollDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScrollUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SrollButtonBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PixelStudio.ico" />
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\Error.png" />
+    <None Include="Resources\Apply.png" />
+    <None Include="Resources\MainMenuLow.png" />
+    <None Include="Resources\MainMenuhigh.png" />
+    <None Include="Resources\BlackBar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
